@@ -2,11 +2,11 @@ package sk.lorman.pporderspring.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import sk.lorman.pporderspring.domain.CustomerDTO;
+import sk.lorman.pporderspring.service.CustomerService;
+
+import java.util.Collection;
 
 @Slf4j
 @RestController
@@ -15,13 +15,21 @@ public class CustomerController {
 
     public static final String BASE_URL = "api/v1/customers";
 
+    private CustomerService customerService;
+
+    public CustomerController(CustomerService customerService) {
+        this.customerService = customerService;
+    }
+
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public CustomerDTO getAllCustomers() {
-        CustomerDTO customerDTO = CustomerDTO.builder().id(1l).name("astar").email("astar@seran.sk").build();
+    public Collection<CustomerDTO> getAllCustomers() {
+        return customerService.getAllCustomers();
+    }
 
-        log.info("getAllCustomers {}", customerDTO);
-
-        return customerDTO;
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public CustomerDTO createNewCustomer(@RequestBody CustomerDTO customerDTO){
+        return customerService.createCustomer(customerDTO);
     }
 }
