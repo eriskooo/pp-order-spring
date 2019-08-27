@@ -12,6 +12,5 @@
     <modules>
         <module>auth-service</module>
         <module>customer-service</module>
-        <module>order-bom</module>
     </modules>
 </project>
