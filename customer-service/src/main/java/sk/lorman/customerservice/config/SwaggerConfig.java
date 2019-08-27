@@ -1,4 +1,4 @@
-package sk.lorman.pporderspring.config;
+package sk.lorman.customerservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

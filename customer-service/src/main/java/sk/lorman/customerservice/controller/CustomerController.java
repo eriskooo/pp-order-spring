@@ -1,10 +1,10 @@
-package sk.lorman.pporderspring.controller;
+package sk.lorman.customerservice.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import sk.lorman.pporderspring.domain.CustomerDTO;
-import sk.lorman.pporderspring.service.CustomerService;
+import sk.lorman.customerservice.domain.CustomerDTO;
+import sk.lorman.customerservice.service.CustomerService;
 
 import java.util.Collection;
 

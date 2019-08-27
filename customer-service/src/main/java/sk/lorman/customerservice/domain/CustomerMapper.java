@@ -1,4 +1,4 @@
-package sk.lorman.pporderspring.domain;
+package sk.lorman.customerservice.domain;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

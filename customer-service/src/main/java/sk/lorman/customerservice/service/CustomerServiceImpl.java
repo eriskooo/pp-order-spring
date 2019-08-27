@@ -1,14 +1,13 @@
-package sk.lorman.pporderspring.service;
+package sk.lorman.customerservice.service;
 
 import org.springframework.stereotype.Service;
-import sk.lorman.pporderspring.domain.CustomerDTO;
-import sk.lorman.pporderspring.domain.CustomerEntity;
-import sk.lorman.pporderspring.domain.CustomerMapper;
-import sk.lorman.pporderspring.exceptions.ResourceNotFoundException;
-import sk.lorman.pporderspring.repository.CustomerRepository;
+import sk.lorman.customerservice.domain.CustomerDTO;
+import sk.lorman.customerservice.domain.CustomerEntity;
+import sk.lorman.customerservice.domain.CustomerMapper;
+import sk.lorman.customerservice.exceptions.ResourceNotFoundException;
+import sk.lorman.customerservice.repository.CustomerRepository;
 
 import java.util.Collection;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service

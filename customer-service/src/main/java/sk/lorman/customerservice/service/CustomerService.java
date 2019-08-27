@@ -1,6 +1,6 @@
-package sk.lorman.pporderspring.service;
+package sk.lorman.customerservice.service;
 
-import sk.lorman.pporderspring.domain.CustomerDTO;
+import sk.lorman.customerservice.domain.CustomerDTO;
 
 import java.util.Collection;
 

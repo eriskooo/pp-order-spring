@@ -1,4 +1,4 @@
-package sk.lorman.pporderspring.exceptions;
+package sk.lorman.customerservice.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
 
